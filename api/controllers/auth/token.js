@@ -7,6 +7,10 @@ exports.handler = (req, res) => {
 		  return res.status(401).json({
 			msg: 'error-token'
 		  })
+		} else {
+		  return res.status(200).json({
+			msg: 'correct-token'
+		  })
 		}
 	});
 	

@@ -48,7 +48,6 @@ export default {
           } catch (e) {
             localStorage.removeItem('token');
             router.push('/login');
-            console.log(e.response.data.msg);
             commit('setError', e.response.data.msg);
           }
         },

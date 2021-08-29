@@ -16,12 +16,14 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   name: "main-layout",
   data: () => ({
-    isOpen: true,
+    isOpen: false,
     loading: true,
   }),
   async mounted() {
     await this.fetchInfo();
     this.loading = false;
+    const screenWidth = window.screen.width;
+    if (screenWidth > 800) this.isOpen = true;
   },
   components: {
     Navbar,

@@ -28,7 +28,11 @@
               <div class="col s12">
                 <div class="card-panel teal lighten-5">
                   <p v-if="getTask.expression[3]" class="center">
-                    <img :src="getTask.expression[3]" height="250" />
+                    <img
+                      :src="getTask.expression[3]"
+                      style="max-height: 250px"
+                      class="responsive-img"
+                    />
                   </p>
                   <p
                     class="task black-text flow-text center-align"
@@ -46,12 +50,12 @@
 
             <div class="row">
               <Form
-                class="col s12 m12 l12 offset-s3 offset-m3 offset-l3"
+                class="col s12 m8 offset-m2"
                 @submit="submitAnswer"
                 :validation-schema="schema"
               >
                 <div class="row">
-                  <div class="input-field col s6">
+                  <div class="input-field col s12">
                     <i class="material-icons prefix">edit</i>
                     <Field
                       id="answer"
@@ -190,7 +194,6 @@ export default {
             level: this.level,
           },
         };
-        console.log(reqTaskDb);
         // добавление ответа в БД
         await this.addTaskDb(reqTaskDb);
 

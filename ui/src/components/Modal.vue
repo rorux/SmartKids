@@ -79,8 +79,8 @@ export default {
 
 <style scoped>
 .modal {
-  width: 40%;
-  top: 30% !important;
+  max-width: 600px;
+  top: 25% !important;
 }
 .baloons {
   background-image: url("/img/baloons2.gif");

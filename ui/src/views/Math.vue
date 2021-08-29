@@ -23,7 +23,7 @@
 
           <div class="task-wrap" v-if="taskAvailable">
             <div class="row">
-              <div class="col s12 m6 l6 offset-m3 offset-l3">
+              <div class="col s12 m8 offset-m2">
                 <div class="card-panel teal lighten-5">
                   <p class="task black-text flow-text center-align">
                     {{ getTask.expression.join(" ") }} = ?
@@ -34,12 +34,12 @@
 
             <div class="row">
               <Form
-                class="col s12 m12 l12 offset-s3 offset-m3 offset-l3"
+                class="col s12 m8 offset-m2"
                 @submit="submitAnswer"
                 :validation-schema="schema"
               >
                 <div class="row">
-                  <div class="input-field col s6">
+                  <div class="input-field col s12">
                     <i class="material-icons prefix">edit</i>
                     <Field
                       id="answer"
@@ -211,6 +211,11 @@ export default {
 .task {
   font-size: 4vw;
   margin: 10px 0;
+}
+@media (max-width: 600px) {
+  .task {
+    font-size: 6vw;
+  }
 }
 label {
   width: 70px !important;

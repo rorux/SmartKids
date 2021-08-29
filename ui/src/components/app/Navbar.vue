@@ -5,10 +5,12 @@
         <a href="#" @click="$emit('toggleMenu')">
           <i class="material-icons black-text">dehaze</i>
         </a>
-        <span class="black-text">{{ dateConverted }}</span>
+        <span class="black-text" style="line-height: 20px">{{
+          dateConverted
+        }}</span>
       </div>
 
-      <ul class="right hide-on-small-and-down">
+      <ul class="right">
         <li>
           <a
             class="dropdown-trigger black-text"
@@ -16,7 +18,7 @@
             data-target="dropdown"
             ref="dropdown"
           >
-            Привет, {{ getInfo.username }}!
+            <span class="welcome">Привет, {{ getInfo.username }}!</span>
             <i class="material-icons right">arrow_drop_down</i>
           </a>
 
@@ -90,3 +92,11 @@ export default {
   },
 };
 </script>
+
+<style>
+@media (max-width: 767px) {
+  .welcome {
+    display: none;
+  }
+}
+</style>

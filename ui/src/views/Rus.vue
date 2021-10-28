@@ -236,6 +236,14 @@ export default {
     margin: 10px 0;
   }
 }
+@media (max-width: 600px) {
+  .task {
+    font-size: 5vw;
+    span {
+      font-size: 6vw;
+    }
+  }
+}
 label {
   width: 70px !important;
 }
